@@ -1,7 +1,7 @@
 var path = require("path");
-var install = require(path.join(__dirname, "install"));
-var prepare = require(path.join(__dirname, "prepare"));
-var test = require(path.join(__dirname, "test"));
+var install = require("./install");
+var prepare = require("./prepare");
+var test = require("./test");
 
 module.exports = function(config) {
   var paths = {};

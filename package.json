@@ -2,8 +2,9 @@
   "name": "binwrap",
   "version": "0.2.0",
   "description": "Package cross-platform binaries",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
+    "build": "rollup --config",
     "test": "(cd test_app && ./build_packages.sh) && mocha && eslint ."
   },
   "repository": {
@@ -17,10 +18,7 @@
   },
   "homepage": "https://github.com/avh4/binwrap#readme",
   "files": [
-    "install.js",
-    "prepare.js",
-    "test.js",
-    "binstall.js",
+    "bundle.js",
     "binstub.js.mustache",
     "bin/binwrap-install",
     "bin/binwrap-prepare",
@@ -36,7 +34,11 @@
     "child-process-promise": "^2.2.1",
     "eslint": "^3.19.0",
     "http-server": "^0.11.1",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "rollup": "^0.65.0",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
   },
   "dependencies": {
     "mustache": "^2.3.0",

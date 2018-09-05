@@ -1,4 +1,5 @@
 language: node_js
+
 node_js:
   - "6"
   - "8"
@@ -6,3 +7,4 @@ node_js:
 
 before_script:
   - (cd test_app && npm install ../)
+  - npm run build
